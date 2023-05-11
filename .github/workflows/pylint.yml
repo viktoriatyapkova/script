@@ -1,0 +1,12 @@
+name: Проверка скрипта
+on: [push]
+jobs:
+  tests:
+    name: Тест
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Тест всего
+      run: |
+        chmod +x test.sh
+        ./test.sh script.sh
